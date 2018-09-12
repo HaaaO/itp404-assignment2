@@ -15,10 +15,10 @@
   <template id="results-template">
   {{#each posts}}
     <div class="post">
-      <a href="{{data.url}}">{{data.title}}</a>
+      <p>Title:<a href="{{data.url}}"  target="_blank"> {{data.title}}</a> </p>
       <p>Score: {{data.score}}</p>
       {{#if data.num_comments}}
-      <p>Comments: {{data.num_comments}}</p>
+      <p>Comments: {{number-format data.num_comments}}</p>
       {{else}}
       <p>No comments</p>
       {{/if}}
